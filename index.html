@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean &amp; Bloom Cafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Bean &amp; Bloom Cafe</h1>
+    <p id="opening-status" class="status"></p>
+    <p>Coffee, Pastries &amp; Cupcakes</p>
+
+    <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#visit">Visit</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section id="home" class="hero">
+        <img src="images/cafe.jpg" alt="A cup of coffee">
+        <div class="hero-text">
+            <h2>Welcome to Bean &amp; Bloom</h2>
+            <p>A cozy cafe serving delicious coffee and fresh pastries.</p>
+            <a href="#menu" class="btn">View Our Menu</a>
+        </div>
+    </section>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+
+        <div class="filter-buttons">
+            <button type="button" class="filter-btn active" data-category="all">All</button>
+            <button type="button" class="filter-btn" data-category="drinks">Drinks</button>
+            <button type="button" class="filter-btn" data-category="pastries">Pastries</button>
+        </div>
+
+        <h3>Select Items for Your Order</h3>
+        <div class="order-items">
+            <label><input type="checkbox" class="menu-check" data-price="3"> Espresso - $3.00</label>
+            <label><input type="checkbox" class="menu-check" data-price="4"> Croissant - $4.00</label>
+            <label><input type="checkbox" class="menu-check" data-price="4.50"> Classic Latte - $4.50</label>
+            <label><input type="checkbox" class="menu-check" data-price="6.75"> Avocado Toast - $6.75</label>
+        </div>
+
+        <p id="total">Total: $0.00</p>
+
+        <h3>Menu Items</h3>
+        <div class="table-wrapper">
+            <table id="menu-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-category="drinks">
+                        <td>Classic Latte</td>
+                        <td>Drinks</td>
+                        <td>Smooth espresso with steamed milk.</td>
+                        <td>$4.50</td>
+                    </tr>
+                    <tr data-category="pastries">
+                        <td>Butter Croissant</td>
+                        <td>Pastries</td>
+                        <td>Fresh and buttery croissant.</td>
+                        <td>$3.25</td>
+                    </tr>
+                    <tr data-category="drinks">
+                        <td>Cold Brew</td>
+                        <td>Drinks</td>
+                        <td>Slow brewed coffee with a smooth taste.</td>
+                        <td>$4.00</td>
+                    </tr>
+                    <tr data-category="pastries">
+                        <td>Avocado Toast</td>
+                        <td>Pastries</td>
+                        <td>Sourdough bread with fresh avocado.</td>
+                        <td>$6.75</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>How We Brew</h2>
+        <p>We follow these simple steps:</p>
+        <ol type="A">
+            <li>Choose good quality beans</li>
+            <li>Roast the beans</li>
+            <li>Grind the beans</li>
+            <li>Brew the coffee</li>
+            <li>Serve with a smile</li>
+        </ol>
+
+        <h3>Why Choose Us?</h3>
+        <ul>
+            <li>Fresh coffee</li>
+            <li>Cozy environment</li>
+            <li>Free Wi-Fi</li>
+        </ul>
+
+        <article>
+            <h2>About Bean &amp; Bloom</h2>
+            <p>Bean &amp; Bloom Cafe is a cozy place where coffee lovers can enjoy freshly prepared drinks and delicious pastries.</p>
+            <p id="extra-story">
+                Our café was created with the idea of bringing people together over great coffee and freshly baked food.
+                We carefully select quality coffee beans and prepare every drink with care. Whether you are meeting friends,
+                studying, or simply relaxing, Bean &amp; Bloom is here to make your day better.
+            </p>
+            <button id="read-more" type="button">Read More</button>
+        </article>
+    </section>
+
+    <section id="visit">
+        <h2>Opening Hours</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr><th>Day</th><th>Opening</th><th>Closing</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Monday - Friday</td><td>7:00 AM</td><td>7:00 PM</td></tr>
+                    <tr><td>Saturday</td><td>8:00 AM</td><td>8:00 PM</td></tr>
+                    <tr><td>Sunday</td><td>8:00 AM</td><td>4:00 PM</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Reserve a Table</h2>
+
+        <form id="contact-form">
+            <label for="username">Full Name</label>
+            <input type="text" id="username" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="birth-year">Birth Year</label>
+            <input type="text" id="birth-year" inputmode="numeric" maxlength="4" placeholder="Example: 2002">
+
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" min="1" max="12" required>
+
+            <p class="form-label">Preferred Seating:</p>
+            <label class="inline-option"><input type="radio" name="seat" value="Indoor" required> Indoor</label>
+            <label class="inline-option"><input type="radio" name="seat" value="Outdoor"> Outdoor</label>
+            <label class="inline-option"><input type="radio" name="seat" value="Bar Seat"> Bar Seat</label>
+
+            <p class="form-label">Extras:</p>
+            <label class="inline-option"><input type="checkbox"> Birthday celebration</label>
+            <label class="inline-option"><input type="checkbox"> Wheelchair access</label>
+            <label class="inline-option"><input type="checkbox"> Newsletter</label>
+
+            <label for="special-notes">Special Request</label>
+            <textarea id="special-notes" maxlength="100" placeholder="Enter your special requests..."></textarea>
+            <p id="character-count">100 characters remaining</p>
+
+            <input type="submit" value="Book Now">
+        </form>
+
+        <p id="form-message" role="status"></p>
+        <p id="discount-message" role="status"></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Bean &amp; Bloom Cafe</p>
+    <p>Instagram | Facebook | Twitter</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
