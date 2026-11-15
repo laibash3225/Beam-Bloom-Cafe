@@ -1,4 +1,3 @@
-# Beam-Bloom-Cafe
 # Beam Bloom Cafe ☕
 
 Beam Bloom Cafe is a stylish and user-friendly café website designed to present a welcoming café experience. It showcases the café's identity, design, and offerings through a clean and attractive layout.
